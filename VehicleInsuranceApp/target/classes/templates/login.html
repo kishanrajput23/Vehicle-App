@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+     <head th:insert = "fragments::pageHeader">
+    <meta charset="ISO-8859-1">
+
+        <title>Login Page</title>
+
+        
+        <script src="https://kit.fontawesome.com/b5b68a63bc.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width initial-scale=1, shrink-to-fit=no">
+
+   
+
+        <link rel="stylesheet" type="text/css" href="css folder/stylesheet.css">
+
+        
+    </head>
+    <body>
+        <header>
+          <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <a class="navbar-brand text-light text-uppercase" href="#">Vehicle Insurance management system</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">
+                    <a class="text-warning" href="#">Sign In</a>
+                    </button>
+             
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">
+                    <a class="text-warning" href="#">Sign Up</a></button>
+                  
+                  </form>
+                </div>
+              </nav>
+          </header> 
+
+          <section class="vh-100">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-6 text-black">
+          
+                  <div class="px-5 ms-xl-4">
+
+                    <i class="fa-solid fa-car fa-3x me-4 pt-6 mt-xl-5" style="color:darkslategrey;"></i>
+                    <span class="h1 fw-bold mb-0">Vehicle Insurance</span>
+                  </div>
+          
+                  <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+          
+                    <form style="width: 23rem;">
+          
+                      <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
+          
+                      <div class="form-outline mb-4">
+                        <input type="email" id="email" class="form-control form-control-lg" name="email" placeholder="Email address">
+                        <label class="form-label" for="email"></label>
+                      </div>
+          
+                      <div class="form-outline mb-4">
+                        <input type="password" id="password" class="form-control form-control-lg" name="password" placeholder="Password">
+                        <label class="form-label" for="password"></label>
+                      </div>
+          
+                      <div class="pt-1 mb-4">
+                        <button class="btn btn-info btn-lg btn-block" type="button"><a href = "#">Login</a></button>
+                      </div>
+          
+                      <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
+                      <p>Don't have an account? 
+                      <a th:href="@{/registration}" class="link-info">Register here</a></p>
+          
+                    </form>
+          
+                  </div>
+          
+                </div>
+                <div class="col-sm-6 px-0 d-none d-sm-block">
+             <img src="vehicle.jpg" alt="Login image" class="w-100 vh-100" style="object-position: left; height: 622px;">
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div th:replace= "fragments::pageFooter"></div>
+
+    </body>
+</html>
